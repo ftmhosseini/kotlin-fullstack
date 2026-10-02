@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        INTERNET permission — required to make network calls to the Spring Boot server
+        Without this, Retrofit calls will fail silently
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+        Allow plain HTTP (not HTTPS) for local development
+        In production, use HTTPS and remove this
+    -->
+    <application
+        android:allowBackup="true"
+        android:label="Kotlin Fullstack App"
+        android:theme="@style/Theme.AndroidApp"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
